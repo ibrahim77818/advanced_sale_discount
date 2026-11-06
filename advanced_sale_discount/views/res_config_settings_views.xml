@@ -5,36 +5,28 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@data-key='sale_management']" position="inside">
-                <h2>Advanced Discounts</h2>
-                <div class="row mt16 o_settings_container" name="asd_discount_setting_container">
-                    <div class="col-12 col-lg-6 o_setting_box" id="asd_discount_setting">
-                        <div class="o_setting_left_pane">
-                            <field name="asd_discount_enabled"/>
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label for="asd_discount_enabled"/>
+            <xpath expr="//app[@name='sale_management']" position="inside">
+                <block title="Advanced Discounts" name="asd_discount_setting_container">
+                    <setting id="asd_discount_setting"
+                             help="Apply percentage or fixed discounts on sales orders and customer invoices">
+                        <field name="asd_discount_enabled"/>
+                        <div class="content-group" invisible="not asd_discount_enabled">
+                            <div class="row mt16">
+                                <label for="asd_discount_product_id" class="col-lg-4 o_light_label"/>
+                                <field name="asd_discount_product_id"
+                                       required="asd_discount_enabled"
+                                       context="{'default_detailed_type': 'service', 'default_invoice_policy': 'order', 'default_sale_ok': True, 'default_purchase_ok': False}"/>
+                            </div>
                             <div class="text-muted">
-                                Apply percentage or fixed discounts on sales orders and customer invoices
+                                Service product with an income account, used on discount and rounding lines
                             </div>
-                            <div class="content-group" attrs="{'invisible': [('asd_discount_enabled', '=', False)]}">
-                                <div class="row mt16">
-                                    <label for="asd_discount_product_id" class="col-lg-4 o_light_label"/>
-                                    <field name="asd_discount_product_id"
-                                           attrs="{'required': [('asd_discount_enabled', '=', True)]}"
-                                           context="{'default_detailed_type': 'service', 'default_invoice_policy': 'order', 'default_sale_ok': True, 'default_purchase_ok': False}"/>
-                                </div>
-                                <div class="text-muted">
-                                    Service product with an income account, used on discount and rounding lines
-                                </div>
-                                <div class="mt8">
-                                    <button name="%(advanced_sale_discount.action_sale_discount_tier_rule)d" type="action"
-                                            string="Volume Discount Rules" icon="fa-arrow-right" class="btn-link"/>
-                                </div>
+                            <div class="mt8">
+                                <button name="%(advanced_sale_discount.action_sale_discount_tier_rule)d" type="action"
+                                        string="Volume Discount Rules" icon="oi-arrow-right" class="btn-link"/>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </setting>
+                </block>
             </xpath>
         </field>
     </record>

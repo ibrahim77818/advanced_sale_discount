@@ -1,6 +1,6 @@
 # Advanced Sale Discount (`advanced_sale_discount`)
 
-Odoo 16.0 Community & Enterprise. Global discounts on **Sales Orders** and
+Odoo 17.0 Community & Enterprise. Global discounts on **Sales Orders** and
 **Customer Invoices / Credit Notes**, the sales-side counterpart of
 `advanced_purchase_discount`.
 
@@ -47,7 +47,7 @@ Fixed amounts can target the untaxed amount or the tax-included total.
 * Discount lines are invoiced **in proportion** to what is invoiceable on the lines
   they discount (delivered qty for "Delivered quantities" products), so partial
   invoices carry their share and the final invoice settles the remainder.
-* Changing an order discount is blocked once anything is invoiced; apply further
+* Changing an order discount is blocked once the order is locked or anything is invoiced; apply further
   discounts on the draft invoice (they compose on top and reset independently).
 * Mode C posts the discount to the discount product's income account (use a
   dedicated *Sales Discounts* account); modes A/B/D reduce each product's revenue.

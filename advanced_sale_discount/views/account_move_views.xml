@@ -12,15 +12,15 @@
                 <field name="asd_discount_fingerprint" invisible="1"/>
                 <button name="action_open_asd_discount_wizard" type="object" string="Apply Discount"
                         groups="advanced_sale_discount.group_sale_discount_user"
-                        attrs="{'invisible': ['|', '|', ('asd_discount_enabled', '=', False), ('state', '!=', 'draft'), ('move_type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+                        invisible="not asd_discount_enabled or state != 'draft' or move_type not in ('out_invoice', 'out_refund')"/>
                 <button name="action_asd_reset_discount" type="object" string="Remove Discount"
                         groups="advanced_sale_discount.group_sale_discount_user"
                         confirm="Remove the global discount applied on this invoice?"
-                        attrs="{'invisible': ['|', '|', ('asd_discount_mode', '=', False), ('state', '!=', 'draft'), ('move_type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+                        invisible="not asd_discount_mode or state != 'draft' or move_type not in ('out_invoice', 'out_refund')"/>
             </xpath>
             <xpath expr="//sheet" position="before">
                 <div class="alert alert-warning mb-0" role="alert"
-                     attrs="{'invisible': ['|', ('asd_discount_stale', '=', False), ('state', '!=', 'draft')]}">
+                     invisible="not asd_discount_stale or state != 'draft'">
                     The invoice lines changed after the global discount was applied, so the discount no longer matches them. Use "Apply Discount" again, or "Remove Discount", before confirming the invoice.
                 </div>
             </xpath>
@@ -30,7 +30,7 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
                 <page string="Global Discount" name="asd_global_discount"
-                      attrs="{'invisible': ['|', ('asd_discount_mode', '=', False), ('move_type', 'not in', ('out_invoice', 'out_refund'))]}">
+                      invisible="not asd_discount_mode or move_type not in ('out_invoice', 'out_refund')">
                     <group>
                         <group>
                             <field name="asd_discount_mode"/>

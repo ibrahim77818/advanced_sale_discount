@@ -11,27 +11,27 @@
                 <field name="currency_id" invisible="1"/>
                 <field name="show_global_value" invisible="1"/>
                 <field name="show_amount_base" invisible="1"/>
-                <div class="alert alert-danger" role="alert" attrs="{'invisible': [('preview_error', '=', False)]}">
+                <div class="alert alert-danger" role="alert" invisible="not preview_error">
                     <field name="preview_error" readonly="1"/>
                 </div>
                 <group>
                     <group string="Distribution">
                         <field name="mode" widget="radio"/>
                         <field name="weighted_method" widget="radio"
-                               attrs="{'invisible': [('mode', '!=', 'weighted')]}"/>
+                               invisible="mode != 'weighted'"/>
                         <field name="tier_rule_ids" widget="many2many_tags"
-                               attrs="{'invisible': [('mode', '!=', 'tiered')]}"
+                               invisible="mode != 'tiered'"
                                options="{'no_create': True}"/>
                     </group>
                     <group string="Discount">
                         <field name="discount_type" widget="radio"
-                               attrs="{'invisible': [('show_global_value', '=', False)]}"/>
+                               invisible="not show_global_value"/>
                         <field name="discount_value"
-                               attrs="{'invisible': [('show_global_value', '=', False)]}"/>
+                               invisible="not show_global_value"/>
                         <field name="amount_base" widget="radio"
-                               attrs="{'invisible': [('show_amount_base', '=', False)]}"/>
+                               invisible="not show_amount_base"/>
                         <field name="residual_policy"
-                               attrs="{'invisible': [('mode', '=', 'line')]}"/>
+                               invisible="mode == 'line'"/>
                     </group>
                 </group>
                 <field name="line_ids" nolabel="1">
@@ -47,15 +47,15 @@
                         <field name="base_total" readonly="1" force_save="1" optional="hide"/>
                         <field name="current_discount" readonly="1" force_save="1"/>
                         <field name="weight"
-                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'weight')]}"/>
+                               column_invisible="parent.mode != 'weighted' or parent.weighted_method != 'weight'"/>
                         <field name="line_percent"
-                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'line_percent')]}"/>
+                               column_invisible="parent.mode != 'weighted' or parent.weighted_method != 'line_percent'"/>
                         <field name="line_amount"
-                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'line_amount')]}"/>
+                               column_invisible="parent.mode != 'weighted' or parent.weighted_method != 'line_amount'"/>
                         <field name="tier_rule_id"
-                               attrs="{'column_invisible': [('parent.mode', '!=', 'tiered')]}"/>
+                               column_invisible="parent.mode != 'tiered'"/>
                         <field name="preview_discount"
-                               attrs="{'column_invisible': [('parent.mode', '=', 'line')]}"/>
+                               column_invisible="parent.mode == 'line'"/>
                         <field name="preview_amount" sum="Total"/>
                     </tree>
                 </field>

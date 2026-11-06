@@ -291,6 +291,15 @@ class TestSaleDiscount(AsdCommon):
         with self.assertRaises(UserError):
             self._apply(order, mode='proportional', discount_type='percent', discount_value=5.0)
 
+    def test_locked_order_blocks(self):
+        # Odoo 17: a locked order stays in state 'sale' with locked=True
+        order = self._std_order()
+        order.action_confirm()
+        order.action_lock()
+        self.assertTrue(order.locked)
+        with self.assertRaises(UserError):
+            order.action_open_asd_discount_wizard()
+
     def test_confirmed_order_can_be_discounted_and_reset(self):
         order = self._std_order()
         order.action_confirm()

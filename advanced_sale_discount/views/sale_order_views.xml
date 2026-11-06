@@ -10,17 +10,18 @@
                 <field name="asd_discount_mode" invisible="1"/>
                 <field name="asd_discount_stale" invisible="1"/>
                 <field name="asd_discount_fingerprint" invisible="1"/>
+                <field name="locked" invisible="1"/>
                 <button name="action_open_asd_discount_wizard" type="object" string="Apply Discount"
                         groups="advanced_sale_discount.group_sale_discount_user"
-                        attrs="{'invisible': ['|', ('asd_discount_enabled', '=', False), ('state', 'not in', ('draft', 'sent', 'sale'))]}"/>
+                        invisible="not asd_discount_enabled or state not in ('draft', 'sent', 'sale') or locked"/>
                 <button name="action_asd_reset_discount" type="object" string="Remove Discount"
                         groups="advanced_sale_discount.group_sale_discount_user"
                         confirm="Remove the global discount from this order?"
-                        attrs="{'invisible': ['|', ('asd_discount_mode', '=', False), ('state', 'not in', ('draft', 'sent', 'sale'))]}"/>
+                        invisible="not asd_discount_mode or state not in ('draft', 'sent', 'sale') or locked"/>
             </xpath>
             <xpath expr="//sheet" position="before">
                 <div class="alert alert-warning mb-0" role="alert"
-                     attrs="{'invisible': [('asd_discount_stale', '=', False)]}">
+                     invisible="not asd_discount_stale">
                     The order lines changed after the global discount was applied, so the discount no longer matches them. Use "Apply Discount" again, or "Remove Discount", before confirming the order.
                 </div>
             </xpath>
@@ -30,7 +31,7 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
                 <page string="Global Discount" name="asd_global_discount"
-                      attrs="{'invisible': [('asd_discount_mode', '=', False)]}">
+                      invisible="not asd_discount_mode">
                     <group>
                         <group>
                             <field name="asd_discount_mode"/>

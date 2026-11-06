@@ -89,7 +89,7 @@ class SaleOrder(models.Model):
 
     def _asd_check_editable(self):
         for order in self:
-            if order.state not in ('draft', 'sent', 'sale'):
+            if order.state not in ('draft', 'sent', 'sale') or order.locked:
                 raise UserError(_(
                     'Global discounts can only be changed on quotations and on '
                     'confirmed sales orders that are not locked or cancelled.'))

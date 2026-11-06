@@ -59,7 +59,7 @@ class SaleOrderLine(models.Model):
         discount and the last invoice settles the remainder exactly."""
         res = super()._compute_qty_to_invoice()
         for line in self:
-            if not line.asd_is_discount_line or line.state not in ('sale', 'done'):
+            if not line.asd_is_discount_line or line.state != 'sale':
                 continue
             sources = line.order_id._asd_source_lines_for(line)
             weight_total = sum(abs(s.price_subtotal) for s in sources)

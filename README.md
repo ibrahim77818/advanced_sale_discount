@@ -4,7 +4,7 @@ Odoo app (`advanced_sale_discount`) for **global discounts on Sales Orders and C
 Invoices / Credit Notes**: a percentage or a fixed amount off the whole document,
 distributed the way you choose and exact to the cent all the way to the journal entry.
 
-**This branch: Odoo 16.0** (Community & Enterprise) · module version `16.0.1.1.0`
+**This branch: Odoo 17.0** (Community & Enterprise) · module version `17.0.1.1.0`
 
 ## Branches
 
@@ -55,7 +55,7 @@ Volume rules: *Sales ▸ Configuration ▸ Volume Discount Rules*.
 ```
 odoo-bin -d <db> -i advanced_sale_discount --test-tags /advanced_sale_discount
 ```
-86 automated tests (a chart of accounts must be installed). More detail in
+87 automated tests (a chart of accounts must be installed). More detail in
 [`advanced_sale_discount/README.md`](advanced_sale_discount/README.md).
 
 ## Author & license
