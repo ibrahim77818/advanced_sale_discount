@@ -14,7 +14,7 @@ class SaleOrderLine(models.Model):
     def _asd_document(self):
         return self.order_id
 
-    @api.depends('price_unit', 'discount', 'product_uom_qty', 'tax_id', 'price_subtotal',
+    @api.depends('price_unit', 'discount', 'product_uom_qty', 'tax_ids', 'price_subtotal',
                  'asd_base_discount', 'asd_extra_discount', 'asd_is_discount_line')
     def _compute_asd_discount_amount(self):
         return super()._compute_asd_discount_amount()
@@ -31,33 +31,34 @@ class SaleOrderLine(models.Model):
         regular = self.filtered(lambda l: not l.asd_is_discount_line)
         return super(SaleOrderLine, regular)._compute_discount()
 
-    def _compute_tax_id(self):
+    def _compute_tax_ids(self):
         discount_lines = self.filtered('asd_is_discount_line')
-        res = super(SaleOrderLine, self - discount_lines)._compute_tax_id()
+        res = super(SaleOrderLine, self - discount_lines)._compute_tax_ids()
         # A discount line follows the taxes of the lines it discounts (already
         # mapped by the fiscal position), e.g. after "Update Taxes".
         for line in discount_lines:
             order = line.order_id
             if not order:
                 continue
-            taxes = line.tax_id
+            taxes = line.tax_ids
             if order.fiscal_position_id:
                 taxes = order.fiscal_position_id.map_tax(taxes)
             groups = {}
             for source in order._asd_structural_lines():
-                groups.setdefault(order._asd_tax_key(source.tax_id), source.tax_id)
+                groups.setdefault(order._asd_tax_key(source.tax_ids), source.tax_ids)
             if order._asd_tax_key(taxes) not in groups and len(groups) == 1:
                 taxes = next(iter(groups.values()))
-            line.tax_id = taxes
+            line.tax_ids = taxes
         return res
 
     @api.depends('order_id.order_line.qty_delivered', 'order_id.order_line.product_uom_qty',
-                 'order_id.order_line.price_subtotal', 'order_id.order_line.tax_id')
+                 'order_id.order_line.price_subtotal', 'order_id.order_line.tax_ids')
     def _compute_qty_to_invoice(self):
         """Invoice discount lines in proportion to what is invoiceable on the
         lines they discount, so partial invoices carry their share of the
         discount and the last invoice settles the remainder exactly."""
         res = super()._compute_qty_to_invoice()
+        qty_digits = self.env['decimal.precision'].precision_get('Product Unit')
         for line in self:
             if not line.asd_is_discount_line or line.state != 'sale':
                 continue
@@ -75,7 +76,7 @@ class SaleOrderLine(models.Model):
                     ratio = 1.0
                 invoiceable += abs(source.price_subtotal) * ratio
             target = float_round(line.product_uom_qty * invoiceable / weight_total,
-                                 precision_rounding=line.product_uom.rounding or 0.01)
+                                 precision_digits=qty_digits)
             line.qty_to_invoice = target - line.qty_invoiced
         return res
 

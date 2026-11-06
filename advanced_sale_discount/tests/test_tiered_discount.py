@@ -46,8 +46,8 @@ class TestTieredDiscount(AsdCommon):
         self._rule([(24, 8.0)])
         uom_dozen = self.env.ref('uom.product_uom_dozen')
         order = self._create_order([Command.create({
-            'product_id': self.prod_a.id, 'product_uom_qty': 2, 'product_uom': uom_dozen.id,
-            'price_unit': 120.0, 'tax_id': [Command.set(self.tax_15.ids)]})])
+            'product_id': self.prod_a.id, 'product_uom_qty': 2, 'product_uom_id': uom_dozen.id,
+            'price_unit': 120.0, 'tax_ids': [Command.set(self.tax_15.ids)]})])
         self._tiered(order)
         self.assertEqual(order.order_line.discount, 8.0)
 

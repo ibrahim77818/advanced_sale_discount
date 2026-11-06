@@ -49,7 +49,7 @@ class TestSaleDiscount(AsdCommon):
         self.assertAlmostEqual(order.order_line[0].discount, 3.33)
         adjustment = self._discount_lines(order)
         self.assertEqual(len(adjustment), 1)
-        self.assertEqual(adjustment.tax_id, self.tax_15)
+        self.assertEqual(adjustment.tax_ids, self.tax_15)
         self.assertEqual(adjustment.product_id, self.discount_product)
         self.assertAlmostEqual(order.amount_untaxed, 999.99 - 33.33, places=2)
 
@@ -133,8 +133,8 @@ class TestSaleDiscount(AsdCommon):
         self._apply(order, mode='line', discount_type='percent', discount_value=10.0)
         discount_lines = self._discount_lines(order)
         self.assertEqual(len(discount_lines), 2)
-        line_15 = discount_lines.filtered(lambda l: l.tax_id == self.tax_15)
-        line_0 = discount_lines.filtered(lambda l: l.tax_id == self.tax_0)
+        line_15 = discount_lines.filtered(lambda l: l.tax_ids == self.tax_15)
+        line_0 = discount_lines.filtered(lambda l: l.tax_ids == self.tax_0)
         self.assertAlmostEqual(line_15.price_subtotal, -53.33)
         self.assertAlmostEqual(line_0.price_subtotal, -46.67)
         self.assertEqual(set(self._regular_lines(order).mapped('discount')), {0.0})
@@ -152,18 +152,19 @@ class TestSaleDiscount(AsdCommon):
         self.assertAlmostEqual(order.amount_total, 207.0, places=2)
 
     def test_dedicated_line_follows_fiscal_position(self):
-        fiscal_position = self.env['account.fiscal.position'].create({
-            'name': 'Export (ASD)',
-            'tax_ids': [Command.create({'tax_src_id': self.tax_15.id,
-                                        'tax_dest_id': self.tax_0.id})],
+        fiscal_position = self.env['account.fiscal.position'].create({'name': 'Export (ASD)'})
+        # v19: the destination tax declares which tax it replaces in which fiscal position
+        self.tax_0.write({
+            'fiscal_position_ids': [Command.link(fiscal_position.id)],
+            'original_tax_ids': [Command.link(self.tax_15.id)],
         })
         order = self._create_order([
             Command.create({'product_id': self.prod_a.id, 'product_uom_qty': 1,
                             'price_unit': 100.0}),
         ], fiscal_position_id=fiscal_position.id)
-        self.assertEqual(order.order_line.tax_id, self.tax_0)
+        self.assertEqual(order.order_line.tax_ids, self.tax_0)
         self._apply(order, mode='line', discount_type='fixed', discount_value=10.0)
-        self.assertEqual(self._discount_lines(order).tax_id, self.tax_0)
+        self.assertEqual(self._discount_lines(order).tax_ids, self.tax_0)
         self.assertAlmostEqual(order.amount_total, 90.0, places=2)
 
     def test_dedicated_line_analytic_distribution(self):
@@ -172,7 +173,7 @@ class TestSaleDiscount(AsdCommon):
             'name': 'ASD Project', 'plan_id': plan.id})
         order = self._create_order([
             Command.create({'product_id': self.prod_a.id, 'product_uom_qty': 1,
-                            'price_unit': 100.0, 'tax_id': [Command.set(self.tax_15.ids)],
+                            'price_unit': 100.0, 'tax_ids': [Command.set(self.tax_15.ids)],
                             'analytic_distribution': {str(analytic.id): 100}}),
         ])
         self._apply(order, mode='line', discount_type='percent', discount_value=5.0)
@@ -312,7 +313,7 @@ class TestSaleDiscount(AsdCommon):
         user = self.env['res.users'].sudo().create({
             'name': 'ASD Salesman', 'login': 'asd_salesman',
             'company_id': self.company.id, 'company_ids': [Command.set(self.company.ids)],
-            'groups_id': [Command.set(self.env.ref('sales_team.group_sale_salesman_all_leads').ids)],
+            'group_ids': [Command.set(self.env.ref('sales_team.group_sale_salesman_all_leads').ids)],
         })
         order = self._std_order()
         with self.assertRaises(AccessError):

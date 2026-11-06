@@ -29,7 +29,7 @@ class SaleOrder(models.Model):
     @api.depends('asd_discount_mode', 'asd_discount_type', 'asd_discount_target',
                  'asd_discount_amount_base', 'asd_discount_fingerprint', 'order_line',
                  'order_line.product_id', 'order_line.product_uom_qty',
-                 'order_line.product_uom', 'order_line.price_unit', 'order_line.tax_id',
+                 'order_line.product_uom_id', 'order_line.price_unit', 'order_line.tax_ids',
                  'order_line.display_type', 'order_line.discount',
                  'order_line.asd_base_discount', 'order_line.asd_extra_discount',
                  'order_line.asd_discount_applied', 'order_line.price_subtotal',
@@ -62,15 +62,15 @@ class SaleOrder(models.Model):
         return line.product_uom_qty
 
     def _asd_line_qty_product_uom(self, line):
-        if line.product_id and line.product_uom and line.product_uom != line.product_id.uom_id:
-            return line.product_uom._compute_quantity(line.product_uom_qty, line.product_id.uom_id)
+        if line.product_id and line.product_uom_id and line.product_uom_id != line.product_id.uom_id:
+            return line.product_uom_id._compute_quantity(line.product_uom_qty, line.product_id.uom_id)
         return line.product_uom_qty
 
     def _asd_line_taxes(self, line):
-        return line.tax_id
+        return line.tax_ids
 
     def _asd_line_uom(self, line):
-        return line.product_uom
+        return line.product_uom_id
 
     def _asd_partner(self):
         return self.partner_id
@@ -117,19 +117,19 @@ class SaleOrder(models.Model):
             'product_id': product.id,
             'name': name,
             'product_uom_qty': 1.0,
-            'product_uom': product.uom_id.id,
+            'product_uom_id': product.uom_id.id,
             'price_unit': price_unit,
             'discount': 0.0,
-            'tax_id': [Command.set(taxes.ids)],
+            'tax_ids': [Command.set(taxes.ids)],
             'asd_is_discount_line': True,
             'analytic_distribution': analytic,
         }
 
     def _asd_source_lines_for(self, discount_line):
         """Regular lines sharing the tax set of ``discount_line``."""
-        key = self._asd_tax_key(discount_line.tax_id)
+        key = self._asd_tax_key(discount_line.tax_ids)
         return self._asd_structural_lines().filtered(
-            lambda l: self._asd_tax_key(l.tax_id) == key)
+            lambda l: self._asd_tax_key(l.tax_ids) == key)
 
     # ------------------------------------------------------------------
     # Native hooks

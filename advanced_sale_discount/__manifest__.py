@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Advanced Sale Discount',
-    'version': '18.0.1.1.0',
+    'version': '19.0.1.1.0',
     'category': 'Sales/Sales',
     'summary': 'Percentage or fixed global discounts on sales orders and customer '
                'invoices: proportional, weighted, dedicated discount line and '

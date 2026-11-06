@@ -2,7 +2,6 @@
 <odoo>
     <record id="group_sale_discount_user" model="res.groups">
         <field name="name">Apply Global Sales Discounts</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
         <field name="comment">Users who can apply and remove global discounts on sales orders and customer invoices.</field>
     </record>
 

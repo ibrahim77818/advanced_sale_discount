@@ -187,7 +187,7 @@ class AsdDiscountWizardLine(models.TransientModel):
     name = fields.Char(string='Description')
     product_id = fields.Many2one('product.product', string='Product')
     qty_product_uom = fields.Float(
-        string='Quantity', digits='Product Unit of Measure',
+        string='Quantity', digits='Product Unit',
         help='Quantity expressed in the product unit of measure.')
     base_subtotal = fields.Monetary(string='Untaxed Amount', currency_field='currency_id')
     base_total = fields.Monetary(string='Total', currency_field='currency_id')

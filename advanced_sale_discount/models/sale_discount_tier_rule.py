@@ -129,15 +129,15 @@ class SaleDiscountTier(models.Model):
     rule_id = fields.Many2one(
         'sale.discount.tier.rule', string='Rule', required=True, ondelete='cascade')
     min_value = fields.Float(
-        string='Minimum Threshold', required=True, digits='Product Unit of Measure',
+        string='Minimum Threshold', required=True, digits='Product Unit',
         help='Quantity or untaxed amount (company currency) from which this tier applies.')
     discount_percent = fields.Float(
         string='Discount (%)', required=True, digits='Discount')
 
-    _sql_constraints = [
-        ('rule_threshold_unique', 'unique(rule_id, min_value)',
-         'Two tiers of the same rule cannot have the same threshold.'),
-    ]
+    _rule_threshold_unique = models.Constraint(
+        'unique(rule_id, min_value)',
+        'Two tiers of the same rule cannot have the same threshold.',
+    )
 
     @api.constrains('min_value', 'discount_percent')
     def _check_values(self):

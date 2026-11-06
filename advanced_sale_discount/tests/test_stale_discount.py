@@ -62,13 +62,13 @@ class TestStaleDiscount(AsdCommon):
     def test_tax_change(self):
         order = self._std_order()
         self._apply(order, mode='line', discount_type='percent', discount_value=10.0)
-        self._regular_lines(order)[0].tax_id = self.tax_0
+        self._regular_lines(order)[0].tax_ids = self.tax_0
         self.assertTrue(order.asd_discount_stale)
 
     def test_unit_of_measure_change(self):
         order = self._order_500()
         self._apply(order, mode='proportional', discount_type='percent', discount_value=10.0)
-        order.order_line.product_uom = self.env.ref('uom.product_uom_dozen')
+        order.order_line.product_uom_id = self.env.ref('uom.product_uom_dozen')
         self.assertTrue(order.asd_discount_stale)
 
     def test_product_change(self):

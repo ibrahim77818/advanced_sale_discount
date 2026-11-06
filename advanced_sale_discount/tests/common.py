@@ -19,7 +19,7 @@ class AsdCommon(AccountTestInvoicingCommon):
             | cls.env.ref('advanced_sale_discount.group_sale_discount_user')
             | cls.env.ref('product.group_discount_per_so_line')
         )
-        cls.env.user.sudo().write({'groups_id': [Command.link(g.id) for g in groups]})
+        cls.env.user.sudo().write({'group_ids': [Command.link(g.id) for g in groups]})
         cls.income_account = cls.company_data['default_account_revenue']
         cls.discount_account = cls.income_account.copy({
             'name': 'Sales Discounts', 'code': 'ASD401'})
@@ -90,7 +90,7 @@ class AsdCommon(AccountTestInvoicingCommon):
             'discount': discount,
         }
         if taxes is not None:
-            vals['tax_id'] = [Command.set(taxes.ids)]
+            vals['tax_ids'] = [Command.set(taxes.ids)]
         return Command.create(vals)
 
     def _create_order(self, lines, partner=None, **extra):

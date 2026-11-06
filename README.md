@@ -4,7 +4,7 @@ Odoo app (`advanced_sale_discount`) for **global discounts on Sales Orders and C
 Invoices / Credit Notes**: a percentage or a fixed amount off the whole document,
 distributed the way you choose and exact to the cent all the way to the journal entry.
 
-**This branch: Odoo 18.0** (Community & Enterprise) · module version `18.0.1.1.0`
+**This branch: Odoo 19.0** (Community & Enterprise) · module version `19.0.1.1.0`
 
 ## Branches
 
