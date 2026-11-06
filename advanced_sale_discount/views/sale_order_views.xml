@@ -25,7 +25,7 @@
                     The order lines changed after the global discount was applied, so the discount no longer matches them. Use "Apply Discount" again, or "Remove Discount", before confirming the order.
                 </div>
             </xpath>
-            <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="before">
+            <xpath expr="//field[@name='order_line']/list/field[@name='price_subtotal']" position="before">
                 <field name="asd_is_discount_line" invisible="1"/>
                 <field name="asd_extra_discount" optional="hide"/>
             </xpath>

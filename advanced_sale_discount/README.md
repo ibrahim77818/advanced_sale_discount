@@ -1,6 +1,6 @@
 # Advanced Sale Discount (`advanced_sale_discount`)
 
-Odoo 17.0 Community & Enterprise. Global discounts on **Sales Orders** and
+Odoo 18.0 Community & Enterprise. Global discounts on **Sales Orders** and
 **Customer Invoices / Credit Notes**, the sales-side counterpart of
 `advanced_purchase_discount`.
 

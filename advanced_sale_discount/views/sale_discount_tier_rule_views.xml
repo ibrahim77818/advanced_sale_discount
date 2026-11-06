@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="sale_discount_tier_rule_view_tree" model="ir.ui.view">
-        <field name="name">sale.discount.tier.rule.tree</field>
+    <record id="sale_discount_tier_rule_view_list" model="ir.ui.view">
+        <field name="name">sale.discount.tier.rule.list</field>
         <field name="model">sale.discount.tier.rule</field>
         <field name="arch" type="xml">
-            <tree string="Volume Discount Rules">
+            <list string="Volume Discount Rules">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="scope"/>
@@ -13,7 +13,7 @@
                 <field name="date_start" optional="show"/>
                 <field name="date_end" optional="show"/>
                 <field name="company_id" groups="base.group_multi_company" optional="show"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -51,10 +51,10 @@
                     <notebook>
                         <page string="Tiers" name="tiers">
                             <field name="tier_ids">
-                                <tree editable="bottom">
+                                <list editable="bottom">
                                     <field name="min_value"/>
                                     <field name="discount_percent"/>
-                                </tree>
+                                </list>
                             </field>
                         </page>
                         <page string="Notes" name="notes">
@@ -84,7 +84,7 @@
     <record id="action_sale_discount_tier_rule" model="ir.actions.act_window">
         <field name="name">Volume Discount Rules</field>
         <field name="res_model">sale.discount.tier.rule</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="search_view_id" ref="sale_discount_tier_rule_view_search"/>
     </record>
 

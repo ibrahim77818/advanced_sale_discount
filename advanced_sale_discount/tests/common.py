@@ -7,8 +7,11 @@ class AsdCommon(AccountTestInvoicingCommon):
     """Shared fixtures: taxes, products, discount product and helpers."""
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
+        # v18: the second company and the foreign currency are opt-in.
+        cls.company_data_2 = cls.setup_other_company()
+        cls.other_currency = cls.setup_other_currency('EUR', rates=[('2016-01-01', 2.0)])
         cls.company = cls.company_data['company']
         groups = (
             cls.env.ref('account.group_account_manager')
@@ -38,7 +41,7 @@ class AsdCommon(AccountTestInvoicingCommon):
         Product = cls.env['product.product']
         cls.discount_product = Product.create({
             'name': 'Global Discount',
-            'detailed_type': 'service',
+            'type': 'service',
             'invoice_policy': 'order',
             'sale_ok': True,
             'taxes_id': [Command.clear()],
@@ -48,23 +51,23 @@ class AsdCommon(AccountTestInvoicingCommon):
         cls.categ_bulk_child = cls.env['product.category'].create({
             'name': 'Bulk Child (ASD)', 'parent_id': cls.categ_bulk.id})
         cls.prod_a = Product.create({
-            'name': 'ASD Product A', 'detailed_type': 'consu', 'invoice_policy': 'order',
+            'name': 'ASD Product A', 'type': 'consu', 'invoice_policy': 'order',
             'list_price': 100.0, 'taxes_id': [Command.set(cls.tax_15.ids)],
             'categ_id': cls.categ_bulk_child.id,
             'property_account_income_id': cls.income_account.id,
         })
         cls.prod_b = Product.create({
-            'name': 'ASD Product B', 'detailed_type': 'consu', 'invoice_policy': 'order',
+            'name': 'ASD Product B', 'type': 'consu', 'invoice_policy': 'order',
             'list_price': 50.0, 'taxes_id': [Command.set(cls.tax_15.ids)],
             'property_account_income_id': cls.income_account.id,
         })
         cls.prod_c = Product.create({
-            'name': 'ASD Product C', 'detailed_type': 'consu', 'invoice_policy': 'order',
+            'name': 'ASD Product C', 'type': 'consu', 'invoice_policy': 'order',
             'list_price': 10.0, 'taxes_id': [Command.set(cls.tax_0.ids)],
             'property_account_income_id': cls.income_account.id,
         })
         cls.prod_service_delivered = Product.create({
-            'name': 'ASD Delivered Service', 'detailed_type': 'service',
+            'name': 'ASD Delivered Service', 'type': 'service',
             'invoice_policy': 'delivery',
             'list_price': 100.0, 'taxes_id': [Command.set(cls.tax_15.ids)],
             'property_account_income_id': cls.income_account.id,

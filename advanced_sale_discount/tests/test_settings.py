@@ -19,7 +19,7 @@ class TestSettings(AsdCommon):
             company.sudo().write({'asd_discount_enabled': True})
 
     def test_product_must_be_service(self):
-        product = self.discount_product.sudo().copy({'detailed_type': 'consu'})
+        product = self.discount_product.sudo().copy({'type': 'consu'})
         with self.assertRaises(ValidationError):
             self.company.sudo().write({'asd_discount_product_id': product.id})
 
@@ -38,7 +38,7 @@ class TestSettings(AsdCommon):
         category = self.env['product.category'].create({'name': 'No Accounts (ASD)'})
         category.property_account_income_categ_id = False
         product = self.env['product.product'].create({
-            'name': 'Discount w/o account', 'detailed_type': 'service',
+            'name': 'Discount w/o account', 'type': 'service',
             'invoice_policy': 'order', 'categ_id': category.id,
             'taxes_id': [Command.clear()],
         })

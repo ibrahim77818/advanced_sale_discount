@@ -15,7 +15,7 @@
                                 <label for="asd_discount_product_id" class="col-lg-4 o_light_label"/>
                                 <field name="asd_discount_product_id"
                                        required="asd_discount_enabled"
-                                       context="{'default_detailed_type': 'service', 'default_invoice_policy': 'order', 'default_sale_ok': True, 'default_purchase_ok': False}"/>
+                                       context="{'default_type': 'service', 'default_invoice_policy': 'order', 'default_sale_ok': True, 'default_purchase_ok': False}"/>
                             </div>
                             <div class="text-muted">
                                 Service product with an income account, used on discount and rounding lines

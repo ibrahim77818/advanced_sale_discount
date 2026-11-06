@@ -12,8 +12,8 @@ from .common import AsdCommon
 class TestTieredDiscount(AsdCommon):
 
     @classmethod
-    def setUpClass(cls, chart_template_ref=None):
-        super().setUpClass(chart_template_ref=chart_template_ref)
+    def setUpClass(cls):
+        super().setUpClass()
         # Keep each test independent from rules created by other modules/data.
         cls.env['sale.discount.tier.rule'].search([]).write({'active': False})
 
@@ -63,7 +63,7 @@ class TestTieredDiscount(AsdCommon):
 
     def test_amount_threshold_in_company_currency(self):
         self._rule([(1000, 7.0)], scope='order', basis='amount')
-        currency = self.currency_data['currency']  # rate 2.0 against the company currency
+        currency = self.other_currency  # rate 2.0 against the company currency
         pricelist = self.env['product.pricelist'].create({
             'name': 'ASD foreign', 'currency_id': currency.id})
         order_low = self._create_order([self._line(self.prod_a, 1, 1500.0, self.tax_15)],

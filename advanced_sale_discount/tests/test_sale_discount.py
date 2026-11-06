@@ -292,7 +292,7 @@ class TestSaleDiscount(AsdCommon):
             self._apply(order, mode='proportional', discount_type='percent', discount_value=5.0)
 
     def test_locked_order_blocks(self):
-        # Odoo 17: a locked order stays in state 'sale' with locked=True
+        # Odoo 17+: a locked order stays in state 'sale' with locked=True
         order = self._std_order()
         order.action_confirm()
         order.action_lock()
