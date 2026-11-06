@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_discount_tier_rule_user,sale.discount.tier.rule user,model_sale_discount_tier_rule,base.group_user,1,0,0,0
+access_sale_discount_tier_rule_manager,sale.discount.tier.rule manager,model_sale_discount_tier_rule,sales_team.group_sale_manager,1,1,1,1
+access_sale_discount_tier_user,sale.discount.tier user,model_sale_discount_tier,base.group_user,1,0,0,0
+access_sale_discount_tier_manager,sale.discount.tier manager,model_sale_discount_tier,sales_team.group_sale_manager,1,1,1,1
+access_asd_discount_wizard,asd.discount.wizard,model_asd_discount_wizard,group_sale_discount_user,1,1,1,1
+access_asd_discount_wizard_line,asd.discount.wizard.line,model_asd_discount_wizard_line,group_sale_discount_user,1,1,1,1

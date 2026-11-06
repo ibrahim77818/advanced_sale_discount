@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="asd_discount_wizard_view_form" model="ir.ui.view">
+        <field name="name">asd.discount.wizard.form</field>
+        <field name="model">asd.discount.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Apply Discount">
+                <field name="sale_order_id" invisible="1"/>
+                <field name="move_id" invisible="1"/>
+                <field name="company_id" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+                <field name="show_global_value" invisible="1"/>
+                <field name="show_amount_base" invisible="1"/>
+                <div class="alert alert-danger" role="alert" attrs="{'invisible': [('preview_error', '=', False)]}">
+                    <field name="preview_error" readonly="1"/>
+                </div>
+                <group>
+                    <group string="Distribution">
+                        <field name="mode" widget="radio"/>
+                        <field name="weighted_method" widget="radio"
+                               attrs="{'invisible': [('mode', '!=', 'weighted')]}"/>
+                        <field name="tier_rule_ids" widget="many2many_tags"
+                               attrs="{'invisible': [('mode', '!=', 'tiered')]}"
+                               options="{'no_create': True}"/>
+                    </group>
+                    <group string="Discount">
+                        <field name="discount_type" widget="radio"
+                               attrs="{'invisible': [('show_global_value', '=', False)]}"/>
+                        <field name="discount_value"
+                               attrs="{'invisible': [('show_global_value', '=', False)]}"/>
+                        <field name="amount_base" widget="radio"
+                               attrs="{'invisible': [('show_amount_base', '=', False)]}"/>
+                        <field name="residual_policy"
+                               attrs="{'invisible': [('mode', '=', 'line')]}"/>
+                    </group>
+                </group>
+                <field name="line_ids" nolabel="1">
+                    <tree editable="bottom" create="0" delete="0">
+                        <field name="sequence" invisible="1" force_save="1"/>
+                        <field name="sale_line_id" invisible="1" force_save="1"/>
+                        <field name="move_line_id" invisible="1" force_save="1"/>
+                        <field name="product_id" invisible="1" force_save="1"/>
+                        <field name="currency_id" invisible="1"/>
+                        <field name="name" readonly="1" force_save="1"/>
+                        <field name="qty_product_uom" readonly="1" force_save="1" optional="show"/>
+                        <field name="base_subtotal" readonly="1" force_save="1" sum="Total"/>
+                        <field name="base_total" readonly="1" force_save="1" optional="hide"/>
+                        <field name="current_discount" readonly="1" force_save="1"/>
+                        <field name="weight"
+                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'weight')]}"/>
+                        <field name="line_percent"
+                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'line_percent')]}"/>
+                        <field name="line_amount"
+                               attrs="{'column_invisible': ['|', ('parent.mode', '!=', 'weighted'), ('parent.weighted_method', '!=', 'line_amount')]}"/>
+                        <field name="tier_rule_id"
+                               attrs="{'column_invisible': [('parent.mode', '!=', 'tiered')]}"/>
+                        <field name="preview_discount"
+                               attrs="{'column_invisible': [('parent.mode', '=', 'line')]}"/>
+                        <field name="preview_amount" sum="Total"/>
+                    </tree>
+                </field>
+                <group class="oe_subtotal_footer">
+                    <field name="total_base"/>
+                    <field name="total_discount"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Apply" class="btn-primary" data-hotkey="q"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

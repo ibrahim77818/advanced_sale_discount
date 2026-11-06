@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_sale_discount_user" model="res.groups">
+        <field name="name">Apply Global Sales Discounts</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="comment">Users who can apply and remove global discounts on sales orders and customer invoices.</field>
+    </record>
+
+    <record id="sales_team.group_sale_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_sale_discount_user'))]"/>
+    </record>
+    <record id="account.group_account_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_sale_discount_user'))]"/>
+    </record>
+
+    <record id="sale_discount_tier_rule_company_rule" model="ir.rule">
+        <field name="name">Sales Volume Discount Rule: multi-company</field>
+        <field name="model_id" ref="model_sale_discount_tier_rule"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

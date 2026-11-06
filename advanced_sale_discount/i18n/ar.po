@@ -1,0 +1,973 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* advanced_sale_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 12:00+0000\n"
+"PO-Revision-Date: 2026-11-05 12:00+0000\n"
+"Last-Translator: Ibrahim Yahia\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "%(product)s (%(taxes)s)"
+msgstr "%(product)s (%(taxes)s)"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "%(product)s - Rounding Adjustment (%(taxes)s)"
+msgstr "%(product)s - تسوية التقريب (%(taxes)s)"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "(draft)"
+msgstr "(مسودة)"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "A percentage discount cannot exceed 100%."
+msgstr "لا يمكن أن يتجاوز الخصم بالنسبة المئوية 100%."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+msgid "A tier discount must be greater than 0% and at most 100%."
+msgstr "يجب أن يكون خصم الشريحة أكبر من 0% وألا يتجاوز 100%."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+msgid "A tier threshold cannot be negative."
+msgstr "لا يمكن أن يكون حد الشريحة سالباً."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Advanced Discounts"
+msgstr "الخصومات المتقدمة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_enabled
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_enabled
+msgid "Advanced Discounts Enabled"
+msgstr "الخصومات المتقدمة مفعّلة"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_mixin
+msgid "Advanced Sale Discount Document"
+msgstr "مستند خصم المبيعات المتقدم"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_line_mixin
+msgid "Advanced Sale Discount Line"
+msgstr "بند خصم المبيعات المتقدم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_company__asd_discount_enabled
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_config_settings__asd_discount_enabled
+msgid "Advanced Sale Discounts"
+msgstr "خصومات المبيعات المتقدمة"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "Advanced sale discounts are not enabled for the company %s. Enable them in Sales settings."
+msgstr "خصومات المبيعات المتقدمة غير مفعّلة للشركة %s. فعّلها من إعدادات المبيعات."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__weighted_method
+msgid "Allocation Method"
+msgstr "طريقة التوزيع"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_res_company__asd_discount_enabled
+msgid "Allow percentage and fixed-amount discounts on sales orders and customer invoices for this company."
+msgstr "السماح بخصومات النسبة المئوية والمبلغ الثابت على أوامر البيع وفواتير العملاء لهذه الشركة."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__amount_base
+msgid "Amount Expressed On"
+msgstr "المبلغ محسوب على"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__line_amount
+msgid "Amount per Line"
+msgstr "مبلغ لكل بند"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__currency_id
+msgid "Amount thresholds are expressed in the company currency."
+msgstr "حدود المبالغ محسوبة بعملة الشركة."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__scope
+msgid "Applies On"
+msgstr "تُطبق على"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Applies To"
+msgstr "تنطبق على"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Apply Discount"
+msgstr "تطبيق الخصم"
+
+#. module: advanced_sale_discount
+#: model:res.groups,name:advanced_sale_discount.group_sale_discount_user
+msgid "Apply Global Sales Discounts"
+msgstr "تطبيق خصومات المبيعات الإجمالية"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Apply percentage or fixed discounts on sales orders and customer invoices"
+msgstr "تطبيق خصومات بالنسبة المئوية أو بمبلغ ثابت على أوامر البيع وفواتير العملاء"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_wizard
+msgid "Apply Sales Discount"
+msgstr "تطبيق خصم المبيعات"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_wizard_line
+msgid "Apply Sales Discount - Line"
+msgstr "تطبيق خصم المبيعات - بند"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__weight
+msgid "By Weight"
+msgstr "حسب الوزن"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__company_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__partner_ids
+msgid "Contract Customers"
+msgstr "عملاء العقد"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+msgid "Contract Rules"
+msgstr "قواعد العقود"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__currency_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__currency_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__current_discount
+msgid "Current Discount (%)"
+msgstr "الخصم الحالي (%)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__line
+msgid "Dedicated Discount Line"
+msgstr "بند خصم مستقل"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__discount_value
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Discount"
+msgstr "الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__discount_percent
+msgid "Discount (%)"
+msgstr "الخصم (%)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__preview_amount
+msgid "Discount Amount"
+msgstr "مبلغ الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_target
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_target
+msgid "Discount amount requested when the discount was last applied."
+msgstr "مبلغ الخصم المطلوب عند آخر تطبيق للخصم."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_base_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_base_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_base_discount
+msgid "Discount Before Global Discount (%)"
+msgstr "الخصم قبل الخصم الإجمالي (%)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_amount_base
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_amount_base
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_amount_base
+msgid "Discount Computed On"
+msgstr "الخصم محسوب على"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_is_discount_line
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_is_discount_line
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_is_discount_line
+msgid "Discount Line"
+msgstr "بند خصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_fingerprint
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_fingerprint
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_fingerprint
+msgid "Discount Lines Snapshot"
+msgstr "لقطة بنود الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_mode
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_mode
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_mode
+msgid "Discount Mode"
+msgstr "طريقة الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_stale
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_stale
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_stale
+msgid "Discount Needs Re-applying"
+msgstr "الخصم يحتاج إلى إعادة تطبيق"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_origin
+msgid "Discount Origin"
+msgstr "مصدر الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__total_discount
+msgid "Discount Preview"
+msgstr "معاينة الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_type
+msgid "Discount Type"
+msgstr "نوع الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_value
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_value
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_value
+msgid "Discount Value"
+msgstr "قيمة الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__total_base
+msgid "Discountable Amount"
+msgstr "المبلغ القابل للخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__mode
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Distribution"
+msgstr "التوزيع"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move_line__asd_discount_origin
+msgid "Document on which the global discount of this line was applied."
+msgstr "المستند الذي طُبق عليه الخصم الإجمالي لهذا البند."
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "e.g. Wholesale volume discount"
+msgstr "مثال: خصم كميات الجملة"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Evaluation"
+msgstr "التقييم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_type__fixed
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Global Discount"
+msgstr "الخصم الإجمالي"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_extra_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_extra_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_extra_discount
+msgid "Global Discount (%)"
+msgstr "الخصم الإجمالي (%)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_amount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_discount_amount
+msgid "Global Discount Amount"
+msgstr "مبلغ الخصم الإجمالي"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_applied
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_discount_applied
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_discount_applied
+msgid "Global Discount Applied"
+msgstr "تم تطبيق الخصم الإجمالي"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "Global discount applied - %(mode)s: %(detail)s. Discount amount: %(amount)s."
+msgstr "تم تطبيق خصم إجمالي - %(mode)s: %(detail)s. مبلغ الخصم: %(amount)s."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+msgid "Global discounts can only be changed on quotations and on confirmed sales orders that are not locked or cancelled."
+msgstr "لا يمكن تغيير الخصومات الإجمالية إلا في عروض الأسعار وأوامر البيع المؤكدة غير المقفلة أو الملغاة."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+msgid "Global sale discounts can only be applied on customer invoices and customer credit notes."
+msgstr "لا يمكن تطبيق خصومات المبيعات الإجمالية إلا على فواتير العملاء والإشعارات الدائنة للعملاء."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__residual_policy__ignore
+msgid "Ignore Rounding Difference"
+msgstr "تجاهل فرق التقريب"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Internal notes about this agreement"
+msgstr "ملاحظات داخلية حول هذه الاتفاقية"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__move_id
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move_line__asd_discount_origin__invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__move_line_id
+msgid "Invoice Line"
+msgstr "بند الفاتورة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__tier_rule_ids
+msgid "Leave empty to evaluate all active volume discount rules."
+msgstr "اتركه فارغاً لتقييم جميع قواعد خصم الكميات النشطة."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__company_id
+msgid "Leave empty to use the rule in all companies."
+msgstr "اتركه فارغاً لاستخدام القاعدة في جميع الشركات."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move_line__asd_is_discount_line
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_line_mixin__asd_is_discount_line
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order_line__asd_is_discount_line
+msgid "Line created by a global discount (dedicated line or rounding adjustment)."
+msgstr "بند أنشأه خصم إجمالي (بند مستقل أو تسوية تقريب)."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__line_percent
+msgid "Line Discount (%)"
+msgstr "خصم البند (%)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__line_amount
+msgid "Line Discount Amount"
+msgstr "مبلغ خصم البند"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__line_ids
+msgid "Lines"
+msgstr "البنود"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_stale
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_mixin__asd_discount_stale
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_stale
+msgid "Lines were changed after the discount was applied."
+msgstr "تم تعديل البنود بعد تطبيق الخصم."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__weighted
+msgid "Manual Weighted"
+msgstr "مرجّح يدوياً"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__min_value
+msgid "Minimum Threshold"
+msgstr "الحد الأدنى"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__preview_discount
+msgid "New Discount (%)"
+msgstr "الخصم الجديد (%)"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "No Taxes"
+msgstr "بدون ضرائب"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "No volume discount rule applies to this document."
+msgstr "لا تنطبق أي قاعدة خصم كميات على هذا المستند."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__note
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "Nothing to apply: all line discounts are zero."
+msgstr "لا يوجد ما يُطبق: جميع خصومات البنود صفر."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__sale_line_id
+msgid "Order Line"
+msgstr "بند الأمر"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__scope__line
+msgid "Per Line"
+msgstr "لكل بند"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__scope
+msgid ""
+"Per Line: each matching line is evaluated on its own quantity or amount.\n"
+"Whole Document: the matching lines are summed and the reached tier is applied to all of them."
+msgstr ""
+"لكل بند: يُقيّم كل بند مطابق حسب كميته أو مبلغه.\n"
+"المستند كاملاً: تُجمع البنود المطابقة وتُطبق الشريحة المحققة عليها جميعاً."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_type__percent
+msgid "Percentage"
+msgstr "نسبة مئوية"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__line_percent
+msgid "Percentage per Line"
+msgstr "نسبة لكل بند"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__residual_policy
+msgid "Percentages are stored with limited decimals. When the discount reached on the lines differs from the requested amount by a few cents, the difference can be posted on a small adjustment line so totals are exact."
+msgstr "تُحفظ النسب المئوية بعدد محدود من الخانات العشرية. عندما يختلف الخصم المحقق على البنود عن المبلغ المطلوب ببضع هللات، يمكن ترحيل الفرق في بند تسوية صغير لتكون الإجماليات دقيقة."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "Please select a discount product to enable advanced sale discounts for the company %s."
+msgstr "يرجى اختيار منتج خصم لتفعيل خصومات المبيعات المتقدمة للشركة %s."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__residual_policy__line
+msgid "Post Rounding Difference on a Discount Line"
+msgstr "ترحيل فرق التقريب في بند خصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__preview_error
+msgid "Preview Error"
+msgstr "خطأ المعاينة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__categ_ids
+msgid "Product Categories"
+msgstr "فئات المنتجات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__product_ids
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__categ_ids
+msgid "Products of these categories and their sub-categories."
+msgstr "منتجات هذه الفئات وفئاتها الفرعية."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__proportional
+msgid "Proportional"
+msgstr "نسبي"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__mode
+msgid ""
+"Proportional: spread the discount on the lines in proportion to their value.\n"
+"Manual Weighted: decide yourself how much each line receives.\n"
+"Dedicated Discount Line: add one negative line per tax group.\n"
+"Smart Tiered Volume: apply the volume discount rules reached by the lines."
+msgstr ""
+"نسبي: توزيع الخصم على البنود بنسبة قيمتها.\n"
+"مرجّح يدوياً: تحدد بنفسك نصيب كل بند من الخصم.\n"
+"بند خصم مستقل: إضافة بند سالب لكل مجموعة ضريبية.\n"
+"شرائح الكميات الذكية: تطبيق قواعد خصم الكميات التي تحققها البنود."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__qty_product_uom
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__basis__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard_line__qty_product_uom
+msgid "Quantity expressed in the product unit of measure."
+msgstr "الكمية بوحدة قياس المنتج."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier__min_value
+msgid "Quantity or untaxed amount (company currency) from which this tier applies."
+msgstr "الكمية أو المبلغ قبل الضريبة (بعملة الشركة) الذي تُطبق ابتداءً منه هذه الشريحة."
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Remove Discount"
+msgstr "إزالة الخصم"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+msgid "Remove the global discount applied on this invoice?"
+msgstr "هل تريد إزالة الخصم الإجمالي المطبق على هذه الفاتورة؟"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Remove the global discount from this order?"
+msgstr "هل تريد إزالة الخصم الإجمالي من هذا الأمر؟"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__partner_ids
+msgid "Restrict the rule to these customers (contract price agreement). Customer-specific rules take precedence over general rules."
+msgstr "قصر القاعدة على هؤلاء العملاء (اتفاقية أسعار تعاقدية). القواعد الخاصة بالعملاء لها الأولوية على القواعد العامة."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__residual_policy
+msgid "Rounding Difference"
+msgstr "فرق التقريب"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__rule_id
+msgid "Rule"
+msgstr "القاعدة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__name
+msgid "Rule Name"
+msgstr "اسم القاعدة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_company__asd_discount_product_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_config_settings__asd_discount_product_id
+msgid "Sale Discount Product"
+msgstr "منتج خصم المبيعات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__sale_order_id
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move_line__asd_discount_origin__sale
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_sale_discount_tier_rule
+msgid "Sales Volume Discount Rule"
+msgstr "قاعدة خصم كميات المبيعات"
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_sale_discount_tier
+msgid "Sales Volume Discount Tier"
+msgstr "شريحة خصم كميات المبيعات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__sequence
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_res_company__asd_discount_product_id
+msgid "Service product used on dedicated discount lines and on rounding adjustment lines. Its income account receives the discount."
+msgstr "منتج خدمة يُستخدم في بنود الخصم المستقلة وبنود تسوية التقريب. يُرحَّل الخصم إلى حساب الإيرادات الخاص به."
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Service product with an income account, used on discount and rounding lines"
+msgstr "منتج خدمة بحساب إيرادات، يُستخدم في بنود الخصم والتقريب"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__show_amount_base
+msgid "Show Amount Base"
+msgstr "إظهار أساس المبلغ"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__show_global_value
+msgid "Show Global Value"
+msgstr "إظهار القيمة الإجمالية"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__tiered
+msgid "Smart Tiered Volume"
+msgstr "شرائح الكميات الذكية"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_target
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_target
+msgid "Target Discount"
+msgstr "الخصم المستهدف"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_fingerprint
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_mixin__asd_discount_fingerprint
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_fingerprint
+msgid "Technical: the lines of the document when the global discount was applied, used to detect later changes."
+msgstr "حقل تقني: بنود المستند عند تطبيق الخصم الإجمالي، تُستخدم لاكتشاف التعديلات اللاحقة."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The amount of the line \"%s\" must be between zero and the line value."
+msgstr "يجب أن يكون مبلغ البند \"%s\" بين الصفر وقيمة البند."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The customer taxes of the discount product \"%s\" must be sales taxes."
+msgstr "يجب أن تكون ضرائب العملاء لمنتج الخصم \"%s\" ضرائب مبيعات."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The discount allocated to the line \"%s\" exceeds its value. Lower its weight or the discount."
+msgstr "الخصم الموزع على البند \"%s\" يتجاوز قيمته. خفّض وزنه أو قيمة الخصم."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The discount amount (%(amount)s) exceeds the discountable amount (%(base)s)."
+msgstr "مبلغ الخصم (%(amount)s) يتجاوز المبلغ القابل للخصم (%(base)s)."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%(product)s\" belongs to another company than %(company)s."
+msgstr "منتج الخصم \"%(product)s\" يتبع شركة أخرى غير %(company)s."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%(product)s\" has no income account for the company %(company)s. Set one on the product or on its category."
+msgstr "منتج الخصم \"%(product)s\" ليس له حساب إيرادات للشركة %(company)s. حدده على المنتج أو على فئته."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%s\" must be a service."
+msgstr "يجب أن يكون منتج الخصم \"%s\" خدمة."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%s\" must use the \"Ordered quantities\" invoicing policy."
+msgstr "يجب أن يستخدم منتج الخصم \"%s\" سياسة الفوترة \"الكميات المطلوبة\"."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "The discount value must be strictly positive."
+msgstr "يجب أن تكون قيمة الخصم أكبر من صفر."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/wizard/asd_discount_wizard.py:0
+msgid "The discount wizard is not linked to any document."
+msgstr "معالج الخصم غير مرتبط بأي مستند."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+#, python-format
+msgid "The end date of the rule \"%s\" must be after its start date."
+msgstr "يجب أن يكون تاريخ انتهاء القاعدة \"%s\" بعد تاريخ بدايتها."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+#, python-format
+msgid "The global discount of %s is out of date: the order lines changed after it was applied. Apply the discount again, or remove it, before confirming."
+msgstr "الخصم الإجمالي للأمر %s لم يعد محدّثاً: تم تعديل بنود الأمر بعد تطبيقه. أعد تطبيق الخصم أو أزله قبل التأكيد."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#, python-format
+msgid "The global discount of the invoice %s is out of date: its lines changed after it was applied. Apply the discount again, or remove it, before confirming."
+msgstr "الخصم الإجمالي للفاتورة %s لم يعد محدّثاً: تم تعديل بنودها بعد تطبيقه. أعد تطبيق الخصم أو أزله قبل التأكيد."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "The global discount was removed."
+msgstr "تمت إزالة الخصم الإجمالي."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#, python-format
+msgid "The invoice %s is not in draft: reset it to draft before changing its global discount."
+msgstr "الفاتورة %s ليست في حالة مسودة: أعدها إلى مسودة قبل تغيير خصمها الإجمالي."
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+msgid "The invoice lines changed after the global discount was applied, so the discount no longer matches them. Use \"Apply Discount\" again, or \"Remove Discount\", before confirming the invoice."
+msgstr "تم تعديل بنود الفاتورة بعد تطبيق الخصم الإجمالي، لذا لم يعد الخصم مطابقاً لها. استخدم \"تطبيق الخصم\" مرة أخرى أو \"إزالة الخصم\" قبل تأكيد الفاتورة."
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "The order lines changed after the global discount was applied, so the discount no longer matches them. Use \"Apply Discount\" again, or \"Remove Discount\", before confirming the order."
+msgstr "تم تعديل بنود الأمر بعد تطبيق الخصم الإجمالي، لذا لم يعد الخصم مطابقاً لها. استخدم \"تطبيق الخصم\" مرة أخرى أو \"إزالة الخصم\" قبل تأكيد الأمر."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The percentage of the line \"%s\" must be between 0 and 100."
+msgstr "يجب أن تكون نسبة البند \"%s\" بين 0 و 100."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+#, python-format
+msgid "The sales order %s is already (partially) invoiced: its global discount can no longer be changed. Apply the discount on the invoice instead."
+msgstr "أمر البيع %s تمت فوترته (جزئياً) بالفعل: لم يعد بالإمكان تغيير خصمه الإجمالي. طبّق الخصم على الفاتورة بدلاً من ذلك."
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "There are no lines eligible for a discount on this document."
+msgstr "لا توجد بنود مؤهلة للخصم في هذا المستند."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__basis
+msgid "Threshold Based On"
+msgstr "الحد مبني على"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__tier_ids
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Tiers"
+msgstr "الشرائح"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__base_total
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_amount_base__total
+msgid "Total (Tax Included)"
+msgstr "الإجمالي (شامل الضريبة)"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_total
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_total
+msgid "Total Discount"
+msgstr "إجمالي الخصم"
+
+#. module: advanced_sale_discount
+#: model:ir.model.constraint,message:advanced_sale_discount.constraint_sale_discount_tier_rule_threshold_unique
+msgid "Two tiers of the same rule cannot have the same threshold."
+msgstr "لا يمكن أن يكون لشريحتين من نفس القاعدة نفس الحد."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__base_subtotal
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__basis__amount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_amount_base__untaxed
+msgid "Untaxed Amount"
+msgstr "المبلغ قبل الضريبة"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_total
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_total
+msgid "Untaxed amount of all global discounts on this document: discounts spread on the lines plus dedicated discount lines."
+msgstr "المبلغ قبل الضريبة لجميع الخصومات الإجمالية في هذا المستند: الخصومات الموزعة على البنود بالإضافة إلى بنود الخصم المستقلة."
+
+#. module: advanced_sale_discount
+#: model:res.groups,comment:advanced_sale_discount.group_sale_discount_user
+msgid "Users who can apply and remove global discounts on sales orders and customer invoices."
+msgstr "المستخدمون الذين يمكنهم تطبيق وإزالة الخصومات الإجمالية على أوامر البيع وفواتير العملاء."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__date_start
+msgid "Valid From"
+msgstr "صالحة من"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__date_end
+msgid "Valid Until"
+msgstr "صالحة حتى"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Validity"
+msgstr "الصلاحية"
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Volume Discount Rule"
+msgstr "قاعدة خصم الكميات"
+
+#. module: advanced_sale_discount
+#: model:ir.actions.act_window,name:advanced_sale_discount.action_sale_discount_tier_rule
+#: model:ir.ui.menu,name:advanced_sale_discount.menu_sale_discount_tier_rule
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_tree
+msgid "Volume Discount Rules"
+msgstr "قواعد خصم الكميات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__tier_rule_id
+msgid "Volume Rule"
+msgstr "قاعدة الكميات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__tier_rule_ids
+msgid "Volume Rules"
+msgstr "قواعد الكميات"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "volume tiers"
+msgstr "شرائح الكميات"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "Weights must be positive and at least one weight must be greater than zero."
+msgstr "يجب أن تكون الأوزان موجبة وأن يكون وزن واحد على الأقل أكبر من صفر."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__amount_base
+msgid "Whether the fixed amount is deducted from the untaxed amount or from the total including taxes."
+msgstr "هل يُخصم المبلغ الثابت من المبلغ قبل الضريبة أم من الإجمالي شاملاً الضرائب."
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__scope__order
+msgid "Whole Document"
+msgstr "المستند كاملاً"
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "المعالج"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "You are not allowed to apply global discounts."
+msgstr "غير مسموح لك بتطبيق الخصومات الإجمالية."

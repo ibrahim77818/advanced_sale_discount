@@ -1,0 +1,966 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* advanced_sale_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-05 12:00+0000\n"
+"PO-Revision-Date: 2026-11-05 12:00+0000\n"
+"Last-Translator: Ibrahim Yahia\n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "%(product)s (%(taxes)s)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "%(product)s - Rounding Adjustment (%(taxes)s)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "(draft)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "A percentage discount cannot exceed 100%."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+msgid "A tier discount must be greater than 0% and at most 100%."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+msgid "A tier threshold cannot be negative."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__active
+msgid "Active"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Advanced Discounts"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_enabled
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_enabled
+msgid "Advanced Discounts Enabled"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_mixin
+msgid "Advanced Sale Discount Document"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_line_mixin
+msgid "Advanced Sale Discount Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_company__asd_discount_enabled
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_config_settings__asd_discount_enabled
+msgid "Advanced Sale Discounts"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "Advanced sale discounts are not enabled for the company %s. Enable them in Sales settings."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__weighted_method
+msgid "Allocation Method"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_res_company__asd_discount_enabled
+msgid "Allow percentage and fixed-amount discounts on sales orders and customer invoices for this company."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__amount_base
+msgid "Amount Expressed On"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__line_amount
+msgid "Amount per Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__currency_id
+msgid "Amount thresholds are expressed in the company currency."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__scope
+msgid "Applies On"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Applies To"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Apply"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Apply Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:res.groups,name:advanced_sale_discount.group_sale_discount_user
+msgid "Apply Global Sales Discounts"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Apply percentage or fixed discounts on sales orders and customer invoices"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_wizard
+msgid "Apply Sales Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_asd_discount_wizard_line
+msgid "Apply Sales Discount - Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__weight
+msgid "By Weight"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__company_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__company_id
+msgid "Company"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__partner_ids
+msgid "Contract Customers"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+msgid "Contract Rules"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__currency_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__currency_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__current_discount
+msgid "Current Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__line
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__line
+msgid "Dedicated Discount Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__name
+msgid "Description"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__discount_value
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__discount_percent
+msgid "Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__preview_amount
+msgid "Discount Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_target
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_target
+msgid "Discount amount requested when the discount was last applied."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_base_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_base_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_base_discount
+msgid "Discount Before Global Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_amount_base
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_amount_base
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_amount_base
+msgid "Discount Computed On"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_is_discount_line
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_is_discount_line
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_is_discount_line
+msgid "Discount Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_fingerprint
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_fingerprint
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_fingerprint
+msgid "Discount Lines Snapshot"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_mode
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_mode
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_mode
+msgid "Discount Mode"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_stale
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_stale
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_stale
+msgid "Discount Needs Re-applying"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_origin
+msgid "Discount Origin"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__total_discount
+msgid "Discount Preview"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__discount_type
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_type
+msgid "Discount Type"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_value
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_mixin__asd_discount_value
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_value
+msgid "Discount Value"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__total_base
+msgid "Discountable Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__mode
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Distribution"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move_line__asd_discount_origin
+msgid "Document on which the global discount of this line was applied."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "e.g. Wholesale volume discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Evaluation"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__discount_type__fixed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_type__fixed
+msgid "Fixed Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Global Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_extra_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_extra_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_extra_discount
+msgid "Global Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_amount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_discount_amount
+msgid "Global Discount Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move_line__asd_discount_applied
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_line_mixin__asd_discount_applied
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order_line__asd_discount_applied
+msgid "Global Discount Applied"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "Global discount applied - %(mode)s: %(detail)s. Discount amount: %(amount)s."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+msgid "Global discounts can only be changed on quotations and on confirmed sales orders that are not locked or cancelled."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+msgid "Global sale discounts can only be applied on customer invoices and customer credit notes."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__residual_policy__ignore
+msgid "Ignore Rounding Difference"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Internal notes about this agreement"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__move_id
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move_line__asd_discount_origin__invoice
+msgid "Invoice"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__move_line_id
+msgid "Invoice Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__tier_rule_ids
+msgid "Leave empty to evaluate all active volume discount rules."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__company_id
+msgid "Leave empty to use the rule in all companies."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move_line__asd_is_discount_line
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_line_mixin__asd_is_discount_line
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order_line__asd_is_discount_line
+msgid "Line created by a global discount (dedicated line or rounding adjustment)."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__line_percent
+msgid "Line Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__line_amount
+msgid "Line Discount Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_stale
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_mixin__asd_discount_stale
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_stale
+msgid "Lines were changed after the discount was applied."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__weighted
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__weighted
+msgid "Manual Weighted"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__min_value
+msgid "Minimum Threshold"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__preview_discount
+msgid "New Discount (%)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "No Taxes"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "No volume discount rule applies to this document."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__note
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "Nothing to apply: all line discounts are zero."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__sale_line_id
+msgid "Order Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__scope__line
+msgid "Per Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__scope
+msgid ""
+"Per Line: each matching line is evaluated on its own quantity or amount.\n"
+"Whole Document: the matching lines are summed and the reached tier is applied to all of them."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__discount_type__percent
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_type__percent
+msgid "Percentage"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__weighted_method__line_percent
+msgid "Percentage per Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__residual_policy
+msgid "Percentages are stored with limited decimals. When the discount reached on the lines differs from the requested amount by a few cents, the difference can be posted on a small adjustment line so totals are exact."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "Please select a discount product to enable advanced sale discounts for the company %s."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__residual_policy__line
+msgid "Post Rounding Difference on a Discount Line"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__preview_error
+msgid "Preview Error"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__categ_ids
+msgid "Product Categories"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__categ_ids
+msgid "Products of these categories and their sub-categories."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__proportional
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__proportional
+msgid "Proportional"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__mode
+msgid ""
+"Proportional: spread the discount on the lines in proportion to their value.\n"
+"Manual Weighted: decide yourself how much each line receives.\n"
+"Dedicated Discount Line: add one negative line per tax group.\n"
+"Smart Tiered Volume: apply the volume discount rules reached by the lines."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__qty_product_uom
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__basis__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard_line__qty_product_uom
+msgid "Quantity expressed in the product unit of measure."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier__min_value
+msgid "Quantity or untaxed amount (company currency) from which this tier applies."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Remove Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+msgid "Remove the global discount applied on this invoice?"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "Remove the global discount from this order?"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_discount_tier_rule__partner_ids
+msgid "Restrict the rule to these customers (contract price agreement). Customer-specific rules take precedence over general rules."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__residual_policy
+msgid "Rounding Difference"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier__rule_id
+msgid "Rule"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__name
+msgid "Rule Name"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_company__asd_discount_product_id
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_res_config_settings__asd_discount_product_id
+msgid "Sale Discount Product"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__sale_order_id
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move_line__asd_discount_origin__sale
+msgid "Sales Order"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_sale_discount_tier_rule
+msgid "Sales Volume Discount Rule"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model,name:advanced_sale_discount.model_sale_discount_tier
+msgid "Sales Volume Discount Tier"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__sequence
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_res_company__asd_discount_product_id
+msgid "Service product used on dedicated discount lines and on rounding adjustment lines. Its income account receives the discount."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+msgid "Service product with an income account, used on discount and rounding lines"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__show_amount_base
+msgid "Show Amount Base"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__show_global_value
+msgid "Show Global Value"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__mode__tiered
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_mode__tiered
+msgid "Smart Tiered Volume"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_target
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_target
+msgid "Target Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_fingerprint
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_mixin__asd_discount_fingerprint
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_fingerprint
+msgid "Technical: the lines of the document when the global discount was applied, used to detect later changes."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The amount of the line \"%s\" must be between zero and the line value."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The customer taxes of the discount product \"%s\" must be sales taxes."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The discount allocated to the line \"%s\" exceeds its value. Lower its weight or the discount."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The discount amount (%(amount)s) exceeds the discountable amount (%(base)s)."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%(product)s\" belongs to another company than %(company)s."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%(product)s\" has no income account for the company %(company)s. Set one on the product or on its category."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%s\" must be a service."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/res_company.py:0
+#, python-format
+msgid "The discount product \"%s\" must use the \"Ordered quantities\" invoicing policy."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "The discount value must be strictly positive."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/wizard/asd_discount_wizard.py:0
+msgid "The discount wizard is not linked to any document."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_discount_tier_rule.py:0
+#, python-format
+msgid "The end date of the rule \"%s\" must be after its start date."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+#, python-format
+msgid "The global discount of %s is out of date: the order lines changed after it was applied. Apply the discount again, or remove it, before confirming."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#, python-format
+msgid "The global discount of the invoice %s is out of date: its lines changed after it was applied. Apply the discount again, or remove it, before confirming."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "The global discount was removed."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/account_move.py:0
+#, python-format
+msgid "The invoice %s is not in draft: reset it to draft before changing its global discount."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_move_form_asd
+msgid "The invoice lines changed after the global discount was applied, so the discount no longer matches them. Use \"Apply Discount\" again, or \"Remove Discount\", before confirming the invoice."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.view_order_form_asd
+msgid "The order lines changed after the global discount was applied, so the discount no longer matches them. Use \"Apply Discount\" again, or \"Remove Discount\", before confirming the order."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+#, python-format
+msgid "The percentage of the line \"%s\" must be between 0 and 100."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/sale_order.py:0
+#, python-format
+msgid "The sales order %s is already (partially) invoiced: its global discount can no longer be changed. Apply the discount on the invoice instead."
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "There are no lines eligible for a discount on this document."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__basis
+msgid "Threshold Based On"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__tier_ids
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Tiers"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__base_total
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.asd_discount_wizard_view_form
+msgid "Total"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__amount_base__total
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_amount_base__total
+msgid "Total (Tax Included)"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_account_move__asd_discount_total
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_order__asd_discount_total
+msgid "Total Discount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.constraint,message:advanced_sale_discount.constraint_sale_discount_tier_rule_threshold_unique
+msgid "Two tiers of the same rule cannot have the same threshold."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__base_subtotal
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__account_move__asd_discount_amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_mixin__asd_discount_amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__asd_discount_wizard__amount_base__untaxed
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__basis__amount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_order__asd_discount_amount_base__untaxed
+msgid "Untaxed Amount"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_account_move__asd_discount_total
+#: model:ir.model.fields,help:advanced_sale_discount.field_sale_order__asd_discount_total
+msgid "Untaxed amount of all global discounts on this document: discounts spread on the lines plus dedicated discount lines."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:res.groups,comment:advanced_sale_discount.group_sale_discount_user
+msgid "Users who can apply and remove global discounts on sales orders and customer invoices."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__date_start
+msgid "Valid From"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_sale_discount_tier_rule__date_end
+msgid "Valid Until"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Validity"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_form
+msgid "Volume Discount Rule"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.actions.act_window,name:advanced_sale_discount.action_sale_discount_tier_rule
+#: model:ir.ui.menu,name:advanced_sale_discount.menu_sale_discount_tier_rule
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.res_config_settings_view_form_asd
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_search
+#: model_terms:ir.ui.view,arch_db:advanced_sale_discount.sale_discount_tier_rule_view_tree
+msgid "Volume Discount Rules"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__tier_rule_id
+msgid "Volume Rule"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard__tier_rule_ids
+msgid "Volume Rules"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "volume tiers"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__weight
+msgid "Weight"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "Weights must be positive and at least one weight must be greater than zero."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,help:advanced_sale_discount.field_asd_discount_wizard__amount_base
+msgid "Whether the fixed amount is deducted from the untaxed amount or from the total including taxes."
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields.selection,name:advanced_sale_discount.selection__sale_discount_tier_rule__scope__order
+msgid "Whole Document"
+msgstr ""
+
+#. module: advanced_sale_discount
+#: model:ir.model.fields,field_description:advanced_sale_discount.field_asd_discount_wizard_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: advanced_sale_discount
+#. odoo-python
+#: code:addons/advanced_sale_discount/models/asd_discount_mixin.py:0
+msgid "You are not allowed to apply global discounts."
+msgstr ""

@@ -1,0 +1,211 @@
+<!-- Odoo Apps description page for advanced_sale_discount (Odoo 16.0). Inline styles only: apps.odoo.com strips <style> and <script> blocks. -->
+<section style="max-width:1120px;margin:0 auto;padding:0 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#2b2b33;">
+
+<!-- ============================== HERO ============================== -->
+<div style="background:linear-gradient(120deg,#017E84 0%,#3d6b78 45%,#714B67 100%);border-radius:18px;padding:48px 40px 40px;color:#ffffff;margin-top:12px;">
+  <div style="font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.85;margin-bottom:10px;">Sales &middot; Invoicing &middot; Discounts</div>
+  <h1 style="font-size:40px;line-height:1.15;font-weight:700;margin:0 0 14px;color:#ffffff;">Advanced Sale Discount</h1>
+  <p style="font-size:19px;line-height:1.55;max-width:760px;margin:0 0 24px;color:#ffffff;opacity:.95;">Give a percentage or a fixed amount off a whole quotation or customer invoice, and choose how it lands: spread on the lines, weighted by you, booked on one discount line per tax group, or driven by volume tiers. Totals are exact to the cent and follow the order all the way to the journal entry.</p>
+  <div>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">Odoo 16.0</span>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">Community &amp; Enterprise</span>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">86 automated tests</span>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">English &amp; Arabic</span>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">Technical name: advanced_sale_discount</span>
+    <span style="display:inline-block;border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:6px 14px;margin:0 8px 8px 0;font-size:14px;">LGPL-3</span>
+  </div>
+</div>
+
+<!-- ============================== KEY NUMBERS ============================== -->
+<div style="display:flex;flex-wrap:wrap;margin:28px -8px 8px;">
+  <div style="flex:1 1 220px;margin:8px;background:#f6f4f6;border-radius:14px;padding:20px 22px;"><div style="font-size:30px;font-weight:700;color:#714B67;">4 modes</div><div style="font-size:15px;color:#555;">Proportional, manual weighted, dedicated line, tiered volume</div></div>
+  <div style="flex:1 1 220px;margin:8px;background:#eef6f6;border-radius:14px;padding:20px 22px;"><div style="font-size:30px;font-weight:700;color:#017E84;">0.00 leakage</div><div style="font-size:15px;color:#555;">Largest-remainder allocation plus automatic rounding lines</div></div>
+  <div style="flex:1 1 220px;margin:8px;background:#f6f4f6;border-radius:14px;padding:20px 22px;"><div style="font-size:30px;font-weight:700;color:#714B67;">2 documents</div><div style="font-size:15px;color:#555;">Sales orders and customer invoices / credit notes</div></div>
+  <div style="flex:1 1 220px;margin:8px;background:#eef6f6;border-radius:14px;padding:20px 22px;"><div style="font-size:30px;font-weight:700;color:#017E84;">86 tests</div><div style="font-size:15px;color:#555;">Engine, modes, taxes, invoicing and settings covered</div></div>
+</div>
+
+<!-- ============================== WHY ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Why this module</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">Standard Odoo discounts work line by line. Customers negotiate a discount on the deal.</p>
+<div style="display:flex;flex-wrap:wrap;margin:0 -10px;">
+  <div style="flex:1 1 440px;margin:10px;border:1px solid #f1d6d6;background:#fff8f8;border-radius:14px;padding:24px 26px;">
+    <h3 style="font-size:19px;font-weight:700;color:#b33939;margin:0 0 12px;">In standard Odoo 16</h3>
+    <ul style="font-size:15px;line-height:1.65;margin:0;padding-left:20px;color:#3a3a42;">
+      <li>A <b>global discount</b> of &ldquo;$ 100 off&rdquo; must be worked out by hand into a percentage on every line.</li>
+      <li>Two-decimal percentages leave <b>cents of difference</b> between what was agreed and what is invoiced.</li>
+      <li>A negative line added by hand gets the <b>wrong taxes</b> when the order mixes VAT 15% and VAT 0% items.</li>
+      <li>No way to put <b>more discount on strategic lines</b> and less on low-margin ones.</li>
+      <li><b>Volume and contract discounts</b> need pricelist rules per product and cannot look at the whole order.</li>
+      <li>A manual discount line is invoiced <b>in full on the first partial invoice</b>, even if most goods are not delivered yet.</li>
+    </ul>
+  </div>
+  <div style="flex:1 1 440px;margin:10px;border:1px solid #cfe7e7;background:#f4fbfb;border-radius:14px;padding:24px 26px;">
+    <h3 style="font-size:19px;font-weight:700;color:#017E84;margin:0 0 12px;">With this module</h3>
+    <ul style="font-size:15px;line-height:1.65;margin:0;padding-left:20px;color:#3a3a42;">
+      <li>Click <b>Apply Discount</b>, type a percentage or an amount, preview it, apply it.</li>
+      <li>The amount is split with a <b>largest-remainder</b> method; any leftover cent goes on a <b>Rounding Adjustment</b> line.</li>
+      <li><b>Dedicated Discount Line</b> mode creates one line per tax group, with the group&rsquo;s taxes and fiscal-position mapping.</li>
+      <li><b>Manual Weighted</b> mode: a weight, a percentage or an amount per line.</li>
+      <li><b>Smart Tiered Volume</b>: quantity or amount tiers per line or per document, with contract customers and validity dates.</li>
+      <li>Discount lines are invoiced <b>in proportion to delivery</b>; the last invoice settles the remainder exactly.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================== HOW IT WORKS ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">How it works</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">Four steps from quotation to journal entry.</p>
+<div style="display:flex;flex-wrap:wrap;margin:0 -8px;">
+  <div style="flex:1 1 200px;margin:8px;border-radius:12px;border:1px solid #e3dde2;padding:18px;"><div style="width:34px;height:34px;border-radius:50%;background:#714B67;color:#fff;font-weight:700;text-align:center;line-height:34px;margin-bottom:10px;">1</div><div style="font-weight:700;margin-bottom:4px;">Enable</div><div style="font-size:14px;color:#555;">Turn on <b>Advanced Sale Discounts</b> per company and pick the discount service product.</div></div>
+  <div style="flex:1 1 200px;margin:8px;border-radius:12px;border:1px solid #e3dde2;padding:18px;"><div style="width:34px;height:34px;border-radius:50%;background:#714B67;color:#fff;font-weight:700;text-align:center;line-height:34px;margin-bottom:10px;">2</div><div style="font-weight:700;margin-bottom:4px;">Choose</div><div style="font-size:14px;color:#555;">On a quotation or draft invoice, click <b>Apply Discount</b> and pick a mode and value.</div></div>
+  <div style="flex:1 1 200px;margin:8px;border-radius:12px;border:1px solid #e3dde2;padding:18px;"><div style="width:34px;height:34px;border-radius:50%;background:#714B67;color:#fff;font-weight:700;text-align:center;line-height:34px;margin-bottom:10px;">3</div><div style="font-weight:700;margin-bottom:4px;">Preview</div><div style="font-size:14px;color:#555;">See the new discount and amount per line before anything is written. Errors show in the wizard.</div></div>
+  <div style="flex:1 1 200px;margin:8px;border-radius:12px;border:1px solid #cfe7e7;background:#f4fbfb;padding:18px;"><div style="width:34px;height:34px;border-radius:50%;background:#017E84;color:#fff;font-weight:700;text-align:center;line-height:34px;margin-bottom:10px;">4</div><div style="font-weight:700;margin-bottom:4px;">Invoice &amp; post</div><div style="font-size:14px;color:#555;">The discount flows to (partial) invoices and posts with the native tax engine.</div></div>
+</div>
+
+<!-- ============================== FEATURES ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Features</h2>
+<p style="font-size:16px;color:#555;margin:0 0 6px;">Screens below use one demo quotation for <b>Deco Addict</b>: 3 &times; Office Chair at 100.00 and 7 &times; Desk Pad at 33.33 (VAT 15%), plus 1 &times; Conference Table at 466.69 (VAT 0%), for an untaxed amount of $&nbsp;1,000.00.</p>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Menus &amp; settings</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">One switch per company</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;"><b>Sales &rsaquo; Configuration &rsaquo; Settings &rsaquo; Advanced Discounts</b>. When <b>Advanced Sale Discounts</b> is on, a <b>Sale Discount Product</b> is required. It is checked on save: it must be a service invoiced on ordered quantities, belong to the company (or be shared), and have an income account. Volume rules live in <b>Sales &rsaquo; Configuration &rsaquo; Volume Discount Rules</b>.</p>
+  <img src="asd_01_settings.png" alt="Sales settings with Advanced Sale Discounts enabled and the discount product selected" style="width:100%;max-width:1000px;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 1</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Proportional: $ 100 off, spread on value</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">The <b>Apply Discount</b> button sits in the quotation header. With <b>Proportional</b> and a <b>Fixed Amount</b> of 100.00, each line gets its share of the value and the wizard previews the <b>New Discount (%)</b> and <b>Discount Amount</b>. An existing line discount is kept and combined: 5% then 10% gives 14.5%.</p>
+  <img src="asd_02_quotation.png" alt="Quotation with the Apply Discount button" style="width:100%;margin-bottom:22px;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+  <img src="asd_03_wizard_proportional.png" alt="Apply Discount wizard in Proportional mode with a fixed amount of 100" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 2</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Exactly $ 900.00 after applying</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Line discounts are written, the optional <b>Global Discount (%)</b> column shows the extra percentage per line, and the chatter logs the mode and amount. The <b>Global Discount</b> tab keeps the mode, value, target and total discount for audit.</p>
+  <img src="asd_04_order_proportional.png" alt="Quotation after a proportional discount, untaxed 900.00, with chatter message" style="width:100%;margin-bottom:22px;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+  <img src="asd_08_global_discount_tab.png" alt="Global Discount tab with mode, type, value, target and total discount" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 3</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Manual Weighted: more discount where you choose</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">With <b>By Weight</b>, each line&rsquo;s share is its value &times; its <b>Weight</b>. Here the Office Chair has weight 2, so it receives $&nbsp;46.15 of the $&nbsp;100.00. <b>Percentage per Line</b> and <b>Amount per Line</b> let you type the discount of each line directly.</p>
+  <img src="asd_05_wizard_weighted.png" alt="Apply Discount wizard in Manual Weighted mode with weights per line" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 4</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Rounding Adjustment lines close the last cents</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Percentages are stored with two decimals, so 15.3833% becomes 15.38% and the lines reach $&nbsp;99.97 instead of $&nbsp;100.00. With <b>Post Rounding Difference on a Discount Line</b>, one small line per tax group brings the untaxed amount to exactly $&nbsp;900.00, with the right VAT on each cent.</p>
+  <img src="asd_06_order_rounding.png" alt="Order with weighted discounts and two rounding adjustment lines, untaxed 900.00" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+  <div style="background:#f4fbfb;border-left:4px solid #017E84;border-radius:8px;padding:16px 20px;font-size:15px;line-height:1.6;margin-top:14px;"><b>Rule:</b> the requested amount is split in cents with the largest-remainder method, so the shares always add up to it. After writing the line discounts, the module compares the achieved and requested discount per tax group; the difference (here $&nbsp;0.02 on VAT 15% and $&nbsp;0.01 on VAT 0%) is posted on the discount product.</div>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 5</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Dedicated Discount Line per tax group</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Product lines stay at list price. A 10% discount adds <b>Global Discount (VAT 15%)</b> for $&nbsp;-53.33 and <b>Global Discount (VAT 0%)</b> for $&nbsp;-46.67, so VAT is reduced only where VAT was charged. Price-included taxes and fiscal positions are handled, and a shared analytic distribution is copied to the discount line.</p>
+  <img src="asd_07_order_discount_lines.png" alt="Order with one discount line for VAT 15% and one for VAT 0%" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 6</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Smart Tiered Volume and contract discounts</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">A <b>Volume Discount Rule</b> has tiers (<b>Minimum Threshold</b> &rarr; <b>Discount (%)</b>), evaluated <b>Per Line</b> or on the <b>Whole Document</b>, on <b>Quantity</b> (in the product unit of measure) or <b>Untaxed Amount</b> (in company currency). It can be limited to <b>Contract Customers</b>, <b>Products</b>, <b>Product Categories</b> (with sub-categories), validity dates and a company. The wizard shows which <b>Volume Rule</b> each line reached.</p>
+  <img src="asd_09_tier_rule.png" alt="Volume discount rule with tiers 10, 50 and 100 units" style="width:100%;margin-bottom:22px;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+  <img src="asd_10_wizard_tiered.png" alt="Apply Discount wizard in Smart Tiered Volume mode showing the rule reached per line" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+  <div style="background:#f4fbfb;border-left:4px solid #017E84;border-radius:8px;padding:16px 20px;font-size:15px;line-height:1.6;margin-top:14px;"><b>Priority:</b> rules with contract customers are evaluated first, then by sequence. For each line, the first rule whose tier is reached wins. Leave <b>Volume Rules</b> empty in the wizard to use all active rules, or pick some.</div>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 7</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Partial invoices carry their share of the discount</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Order S00045: 10 &times; Installation at 100.00 (invoiced on delivered quantities) with a 10% dedicated discount line. After 4 are delivered, the invoice contains the discount line with quantity <b>0.40</b>: $&nbsp;400.00 &minus; $&nbsp;40.00. The next invoice takes 0.60, and the total invoiced equals the order. Line discounts and their origin are copied to the invoice too.</p>
+  <img src="asd_11_partial_invoice.png" alt="Draft invoice with 4 installations and a 0.40 discount line" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 8</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Discounts visible in the general ledger</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Discount lines post to the income account of the discount product. Give it a <b>Sales Discounts</b> account and the discount appears as its own debit, while revenue stays at list price. Proportional, weighted and tiered discounts reduce each product&rsquo;s revenue instead.</p>
+  <img src="asd_12_journal_items.png" alt="Journal items with a debit on Sales Discounts" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<div style="margin:44px 0 0;">
+  <div style="font-size:13px;font-weight:700;color:#017E84;letter-spacing:1px;text-transform:uppercase;">Feature 9</div>
+  <h3 style="font-size:23px;font-weight:700;margin:4px 0 8px;">Fully translated to Arabic</h3>
+  <p style="font-size:15px;line-height:1.6;color:#555;margin:0 0 14px;">Every field, mode, message and screen is translated (<code>i18n/ar.po</code>), and the wizard works right-to-left. A <code>.pot</code> template is included for other languages.</p>
+  <img src="asd_13_arabic_wizard.png" alt="Apply Discount wizard in Arabic, right to left" style="width:100%;border:1px solid #e1e1e6;border-radius:10px;box-shadow:0 6px 24px rgba(30,30,60,.10);"/>
+</div>
+
+<!-- ============================== MODES ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Which mode for which deal</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">All modes work on sales orders and on draft customer invoices and credit notes.</p>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:15px;">
+  <thead><tr style="background:#714B67;color:#fff;"><th style="text-align:left;padding:10px 14px;">Mode</th><th style="text-align:left;padding:10px 14px;">Input</th><th style="text-align:left;padding:10px 14px;">Where the discount goes</th><th style="text-align:left;padding:10px 14px;">Typical use</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;"><b>Proportional</b></td><td style="padding:10px 14px;">% or amount (untaxed or tax-included)</td><td style="padding:10px 14px;">Line discount %</td><td style="padding:10px 14px;">&ldquo;10% off everything&rdquo;, &ldquo;$&nbsp;500 off the deal&rdquo;</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;"><b>Manual Weighted</b></td><td style="padding:10px 14px;">Weight, % or amount per line</td><td style="padding:10px 14px;">Line discount %</td><td style="padding:10px 14px;">Protect low-margin lines</td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;"><b>Dedicated Discount Line</b></td><td style="padding:10px 14px;">% or amount</td><td style="padding:10px 14px;">One negative line per tax group</td><td style="padding:10px 14px;">Keep list prices visible, separate GL account</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;"><b>Smart Tiered Volume</b></td><td style="padding:10px 14px;">Volume Discount Rules</td><td style="padding:10px 14px;">Line discount %</td><td style="padding:10px 14px;">Quantity breaks, contract customers</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ============================== CORNER CASES ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Built for real-world corner cases</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">Handled in the code, and most of them pinned down by the automated tests.</p>
+<div style="display:flex;flex-wrap:wrap;margin:0 -8px;font-size:15px;line-height:1.55;">
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Re-applying</b><br/><span style="color:#555;">The previous global discount is removed first, so applying 10% twice stays 10%, never 19%.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Remove Discount</b><br/><span style="color:#555;">Restores each line&rsquo;s original discount and deletes discount lines, also on confirmed orders.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Lines changed afterwards</b><br/><span style="color:#555;">Changing a product, quantity, unit, price or tax, or adding or removing a line, raises an out-of-date banner. The order cannot be confirmed, nor the invoice posted, until the discount is applied again or removed.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Already invoiced orders</b><br/><span style="color:#555;">The order discount is locked; a further discount can be applied on the draft invoice and removed there independently.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Invalid input</b><br/><span style="color:#555;">Zero, negative, over 100% or above the order value is refused; the wizard shows the reason before you click <b>Apply</b>.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Excluded lines</b><br/><span style="color:#555;">Sections, notes, zero-value lines, down payments, shipping and reward lines are never discounted.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Multi-currency</b><br/><span style="color:#555;">Amounts are rounded in the document currency; tier amount thresholds are converted to company currency at the document date.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Units of measure</b><br/><span style="color:#555;">Quantity tiers compare in the product unit: 2 dozen reach a 24-unit tier.</span></div>
+  <div style="flex:1 1 320px;margin:8px;padding:16px 18px;border:1px solid #e8e8ee;border-radius:12px;"><b>Duplicated quotations</b><br/><span style="color:#555;">Copies keep their discount and can be reset on their own.</span></div>
+</div>
+
+<!-- ============================== SECURITY ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Security</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">Discounts are a right, not a default.</p>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+  <thead><tr style="background:#714B67;color:#fff;"><th style="text-align:left;padding:10px 14px;">Who</th><th style="text-align:left;padding:10px 14px;">Can</th></tr></thead>
+  <tbody>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;"><b>Apply Global Sales Discounts</b></td><td style="padding:10px 14px;">See and use <b>Apply Discount</b> and <b>Remove Discount</b> on orders and customer invoices. Implied by Sales Administrator and Billing Administrator; grant it to salespeople as needed.</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;"><b>Sales: Administrator</b></td><td style="padding:10px 14px;">Create and edit <b>Volume Discount Rules</b> and the company settings.</td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;"><b>Internal users</b></td><td style="padding:10px 14px;">Read volume rules (needed to evaluate them).</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;"><b>Multi-company</b></td><td style="padding:10px 14px;">Settings and discount product per company; rules are restricted to their company (or shared when left empty) by a record rule.</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================== TECHNICAL ============================== -->
+<h2 style="font-size:28px;font-weight:700;margin:40px 0 6px;color:#2b2b33;">Technical details</h2>
+<p style="font-size:16px;color:#555;margin:0 0 18px;">Shared discount logic, no change to Odoo&rsquo;s tax engine.</p>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+  <tbody>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;width:240px;color:#777;">Odoo version</td><td style="padding:10px 14px;">16.0, Community and Enterprise</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;width:240px;color:#777;">Depends on</td><td style="padding:10px 14px;"><code>sale</code>, <code>account</code></td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;width:240px;color:#777;">Python dependency</td><td style="padding:10px 14px;">None</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;width:240px;color:#777;">Menus</td><td style="padding:10px 14px;">Sales &rsaquo; Configuration &rsaquo; Volume Discount Rules; <b>Apply Discount</b> / <b>Remove Discount</b> buttons on sales orders and customer invoices</td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;width:240px;color:#777;">Settings</td><td style="padding:10px 14px;">Sales &rsaquo; Configuration &rsaquo; Settings &rsaquo; Advanced Discounts</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;width:240px;color:#777;">Models</td><td style="padding:10px 14px;"><code>sale.discount.tier.rule</code>, <code>sale.discount.tier</code>, wizard <code>asd.discount.wizard</code>; mixins <code>asd.discount.mixin</code> and <code>asd.discount.line.mixin</code> on <code>sale.order</code>, <code>account.move</code> and their lines</td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;width:240px;color:#777;">Automated tests</td><td style="padding:10px 14px;">86: allocation engine, out-of-date detection, settings validation, all four modes, price-included taxes, fiscal positions, analytic distribution, tiers (UoM, currency, contracts, dates, companies), customer invoices and credit notes, partial invoicing and journal entries</td></tr>
+    <tr style="border-bottom:1px solid #eee;background:#fafafa;"><td style="padding:10px 14px;width:240px;color:#777;">Languages</td><td style="padding:10px 14px;">English, Arabic (<code>ar.po</code>), translation template included</td></tr>
+    <tr style="border-bottom:1px solid #eee;"><td style="padding:10px 14px;width:240px;color:#777;">License</td><td style="padding:10px 14px;">LGPL-3</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================== CONTACT ============================== -->
+<div style="margin:52px 0 40px;background:linear-gradient(120deg,#714B67 0%,#017E84 100%);border-radius:18px;padding:36px 40px;color:#fff;">
+  <h2 style="font-size:26px;font-weight:700;margin:0 0 8px;color:#fff;">Support &amp; customization</h2>
+  <p style="font-size:16px;line-height:1.6;margin:0 0 20px;color:#fff;opacity:.95;">Questions, a demo, or an adaptation to your own process? Get in touch.</p>
+  <a href="mailto:ibrahim.yahiah@gmail.com" style="display:inline-block;background:#fff;color:#714B67;font-weight:700;text-decoration:none;border-radius:8px;padding:12px 22px;margin:0 12px 10px 0;">&#9993;&nbsp; ibrahim.yahiah@gmail.com</a>
+  <a href="https://www.linkedin.com/in/ibrahim-yahia" target="_blank" rel="noopener" style="display:inline-block;border:2px solid #fff;color:#fff;font-weight:700;text-decoration:none;border-radius:8px;padding:10px 22px;margin:0 0 10px 0;">LinkedIn: Ibrahim Yahia</a>
+  <p style="font-size:13px;margin:14px 0 0;opacity:.8;color:#fff;">Author: Ibrahim Yahia &middot; License: LGPL-3</p>
+</div>
+
+</section>
